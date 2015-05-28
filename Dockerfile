@@ -2,9 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Gard Voigt Rimestad <dockerhub@gurters.com>
 
 RUN apt-get update && apt-get install -y puppet-common
-RUN mkdir -p /tmp/puppet/manifests/
-RUN mkdir -p /tmp/puppet/modules/
-RUN mkdir -p /tmp/puppet/hieradata/
+RUN mkdir -p /tmp/puppet/manifests/ /tmp/puppet/modules/ /tmp/puppet/hieradata/
 COPY manifests/rvm.pp /tmp/puppet/manifests/
 COPY hiera.yaml /tmp/puppet/
 COPY hieradata/common.yaml /tmp/puppet/hieradata/

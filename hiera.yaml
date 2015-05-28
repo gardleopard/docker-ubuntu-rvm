@@ -3,4 +3,4 @@
   - yaml
 :logger: console
 :yaml:
-  :datadir: /tmp/packer-puppet-masterless/hieradata
+  :datadir: /tmp/puppet/hieradata
