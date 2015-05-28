@@ -1,0 +1,5 @@
+---
+
+rvm::system_rubies:
+  '1.9':
+    default_use: true
