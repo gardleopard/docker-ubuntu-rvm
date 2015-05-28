@@ -9,5 +9,4 @@ COPY manifests/rvm.pp /tmp/puppet/manifests/
 COPY hiera.yaml /tmp/puppet/
 COPY hieradata/common.yaml /tmp/puppet/hieradata/
 RUN puppet module install --modulepath /tmp/puppet/modules maestrodev/rvm
-RUN find /tmp/puppet
 RUN puppet apply --verbose --modulepath='/tmp/puppet/modules' --hiera_config=/tmp/puppet/hiera.yaml /tmp/puppet/manifests/rvm.pp
